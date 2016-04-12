@@ -7484,3 +7484,13 @@ td.visible-print {
   line-height: 75px;
   margin-bottom: 50px;
 }
+#app #mute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+#app #mute .soundbar {
+  float: left;
+  margin-right: 5px;
+}

@@ -42,17 +42,17 @@ var sound =
 				swfPath : "/dist/swf"
 			});
 		
-			var $this = this;
+			var $that = this;
 			
-			var btn = document.querySelector('.noSound');
+			var btn = document.querySelector('#mute');
 			var kickMute = function() {
 				if($(this).hasClass('mute'))
 				{
 					$(this).removeClass('mute');
-					$this.play();
+					$that.play();
 				}else{
 					$(this).addClass('mute');
-					$this.pause();
+					$that.pause();
 				}
 			
 				
@@ -64,10 +64,12 @@ var sound =
 	
 	play:function() {
 		$("#sound").jPlayer("play");
+		$("#mute").html('<i class="fa  fa-volume-up"></i>&nbsp;<span>Pause</span>');
 	},
-	
+
 	pause:function() {
 		$("#sound").jPlayer("pause");
+		$("#mute").html('<i class="fa  fa-volume-off"></i>&nbsp;<span>Play</span>');
 	}
 	
 }
