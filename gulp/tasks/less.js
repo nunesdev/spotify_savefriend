@@ -4,7 +4,7 @@ var autoprefixer 	= require('gulp-autoprefixer');
 var handleErrors 	= require('../util/handleErrors');
 var pkg 			= require('../../package.json');
 var srcPath 		= "./src";
-var dstPath 		= "../dist";  
+var dstPath 		= "./dist";  
 
 gulp.task('less', function() {
 	return gulp.src( srcPath + '/less/main.less')

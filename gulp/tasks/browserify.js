@@ -6,7 +6,7 @@ var handleErrors 	= require('../util/handleErrors');
 var source 			= require('vinyl-source-stream');
 var pkg 			= require('../../package.json');
 var srcPath 		= "./src";
-var dstPath 		= "../dist"; 
+var dstPath 		= "./dist"; 
 
 gulp.task('browserify', function(){
 	return browserify(srcPath + '/js/main.js')

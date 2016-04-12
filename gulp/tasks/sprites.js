@@ -10,6 +10,6 @@ var gulp     = require('gulp'),
 			algorithm: 'binary-tree'
 		}))
 
-		spriteData.img.pipe(gulp.dest('../dist/img/'));
+		spriteData.img.pipe(gulp.dest('./dist/img/'));
 		spriteData.css.pipe(gulp.dest('./src/less/base/')); 
 	});
