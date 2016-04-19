@@ -389,6 +389,17 @@ var SpotifyWebApi = (function() {
     return _checkParamsAndPerformRequest(requestData, callback);
   };
 
+  Constr.prototype.getMyFriends = function(userId, callback) {
+    var requestData = {
+      url: _baseUri + '/me/followed/',
+      type: 'GET',
+      params: {
+        type: 'user'
+      }
+    };
+    return _checkParamsAndPerformRequest(requestData, callback);
+  };
+
   /**
    * Adds the current user as a follower of one or more artists.
    * See [Follow Artists or Users](https://developer.spotify.com/web-api/follow-artists-users/) on

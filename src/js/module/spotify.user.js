@@ -11,6 +11,7 @@ var spotify_user = {
             .then(function(response) {
                 $that.user = response;
                 $that.getPlaylist();
+                $that.getMyFriends();
             });		
 	},
 
@@ -24,6 +25,16 @@ var spotify_user = {
 		    console.error(err);
 		  });
 
+	},
+
+	getMyFriends: function(){
+		spotify_service.getMyFriends(this.user.id)
+		  
+		  .then(function(data) {
+		    console.log('User friends', data);
+		  }, function(err) {
+		    console.error(err);
+		  });
 	}
 
 
